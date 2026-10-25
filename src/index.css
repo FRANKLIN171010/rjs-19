@@ -5,89 +5,105 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f2f5f9;
-  color: #222;
+  background: #f4f7fb;
+  color: #263238;
 }
 
-header {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
   background: #243b55;
   color: white;
-  padding: 20px;
-  text-align: center;
 }
 
-header h1 {
+.navbar h2 {
   margin: 0;
 }
 
-nav {
+.nav-links {
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 15px;
+  gap: 24px;
 }
 
-nav a {
+.nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-links a:hover {
+  color: #8be9fd;
 }
 
-.page {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 25px;
-  background: white;
-  border-radius: 10px;
-  line-height: 1.7;
-  box-shadow: 0 3px 10px #00000012;
-}
-
-.page h1,
-.page h2 {
+.home-container {
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 35px 20px;
   text-align: center;
 }
 
-.student-photo {
+.student-image {
   width: 180px;
   height: 180px;
-  object-fit: cover;
   border-radius: 50%;
-  display: block;
-  margin: 20px auto;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.home-page p {
+.home-container h1 {
+  color: #1769aa;
+  margin-top: 24px;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.about-container {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+.about-container > h1 {
   text-align: center;
+  color: #1769aa;
+  margin-bottom: 30px;
 }
 
-.about-page section {
-  margin: 25px 0;
+.about-card {
+  background: white;
+  padding: 22px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  border-left: 5px solid #1769aa;
 }
 
-.about-page li {
-  margin: 8px 0;
+.about-card h2 {
+  margin-top: 0;
+  color: #243b55;
 }
 
-footer {
-  background: #243b55;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  margin-top: 40px;
+.about-card p,
+.about-card li {
+  line-height: 1.8;
 }
 
 @media (max-width: 600px) {
-  .page {
-    margin: 15px;
-    padding: 18px;
+  .navbar {
+    padding: 15px;
+    flex-direction: column;
+    gap: 14px;
   }
 
-  nav {
-    gap: 18px;
+  .about-container {
+    margin: 20px auto;
   }
 }
